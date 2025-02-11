@@ -1,0 +1,151 @@
+/* General Navbar styles */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 12%;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #00B4D8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+}
+
+.nav.scrolled {
+    background-color: white;
+    color: #00B4D8;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 99%;
+    margin:5px;
+    margin-left: 8px;
+    border-radius: 10px;
+}
+
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logoText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+    gap: 50px; /* Reduced gap for desktop */
+    margin: 0;
+    align-items: center;
+}
+
+.li {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: inherit; /* Inherit color based on scroll state */
+    transition: color 0.3s ease;
+}
+
+/* Change text color when scrolled */
+.nav.scrolled .li {
+    color: #00B4D8;
+}
+
+/* Hamburger icon styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Button styles */
+.centerButton {
+    background-color: #0077B6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 7px; /* Adjusted margin */
+}
+
+.centerButton:hover {
+    background-color: darkgreen;
+}
+
+/* Mobile menu styles */
+@media (max-width: 1024px) {
+    .nav.scrolled {
+        width: 100%;
+        margin:0px;
+        border-radius: 0px;
+    }
+    
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+  
+    }
+
+    .ul {
+        display: none; /* Hide menu by default on mobile */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+
+        height: 295px;
+        background-color: black;
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 10px; /* Gap between items in mobile menu */
+        text-align: center;
+    }
+
+    .ul.show {
+        display: flex; /* Show menu when toggled */
+        margin-top: 20px;
+    }
+
+    .li {
+        font-size: 1rem;
+        color: white;
+        width: 68%;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Line under each menu item */
+    }
+
+    .centerButton {
+        background-color: #0077B6;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        width: fit-content;
+        align-self: center; /* Center the button */
+        margin-top: 1px; /* Add space above the button */
+    }
+
+    .centerButton:hover {
+        background-color: darkgreen;
+    }
+    
+}

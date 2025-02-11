@@ -1,0 +1,19 @@
+.text-container {
+   margin-top: 120px;
+    text-align: center;
+ overflow-y: hidden;
+  }
+  
+  .blog {
+    font-size: 3rem; /* Size for the header */
+    font-weight: bold; /* Make the text bold */
+    color: #03045e; /* Header color */
+    margin-bottom: 10px; /* Space between the header and subheader */
+  }
+  
+  .blogsub {
+    font-size: 2rem; /* Size for the subheader */
+    font-weight: bold; /* Make the text bold */
+    color: #0077b6; /* Subheader color */
+    margin-bottom: 100px;
+  }

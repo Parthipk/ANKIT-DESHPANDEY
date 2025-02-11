@@ -1,0 +1,237 @@
+/* Outer container */
+.eighthsection_outer_container {
+    padding: 50px 20px; /* Padding for the entire section */
+    color: rgb(14, 2, 2); /* Text color for heading, subheading, and description */
+    margin-top: -100px;
+}
+
+/* Section heading */
+.eighthsection_heading {
+    font-size: 32px; /* Large font size for heading */
+    font-weight: bold; /* Bold heading */
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 10px; /* Space below heading */
+    margin-left: 150px; /* Adjust the margin for better alignment */
+}
+
+/* Section subheading */
+.eighthsection_subheading {
+    font-size: 20px; /* Font size for subheading */
+    text-align: left; /* Align subheading to the left */
+    margin-bottom: 20px; /* Space below subheading */
+    margin-left: 150px; /* Adjust margin for better alignment */
+}
+
+/* Flexbox container for map and form */
+.eighthsection_container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between; /* Space between map and form */
+    width: 81.5%; /* Slightly increase the container width */
+    margin: 0 auto; /* Center the container */
+    gap: 20px; /* Gap between items */
+}
+
+/* Map section */
+.eighthsection_map {
+    position: relative; /* Needed to position the label (icon) absolutely inside the map */
+    flex: 1;
+    margin-top: 0px;
+}
+
+/* Label and location icon */
+.eighthsection_map_label {
+    position: absolute; /* Absolutely position the label */
+    top: 315px; /* 100px from the top */
+    left: 260px;
+    color: red; /* White color for text/icon */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    align-items: center; /* Align icon and text in the center */
+    font-size: 16px; /* Set font size for label */
+}
+
+/* Location icon styling */
+.location-icon {
+    margin-right: 8px; /* Space between the icon and the label */
+    font-size: 20px; /* Increase the size of the location icon */
+}
+
+.location-message {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: -30px; /* Adjust the position relative to the icon */
+    left: 40px; /* Adjust position to appear next to the icon */
+    background-color:white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.371); /* Add shadow effect */
+    color: grey;
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Show message on hover */
+.eighthsection_map_label:hover .location-message {
+    display: block; /* Display the message when hovering over the label */
+}
+
+/* Form container */
+.eighthsection_form_container {
+    flex: 1;
+    margin-top: 0px;
+    min-width: 320px;
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Ensure the form fields stack vertically */
+    gap: 20px; /* Space between each form field */
+}
+
+/* Form input fields */
+.eighthsection_form_group {
+    display: flex;
+    flex-direction: column; /* Stack input fields vertically */
+    gap: 10px; /* Space between labels and inputs */
+    width: 100%;
+}
+
+/* Input styling */
+.eighthsection_input {
+    padding: 12px;
+    border: 1px solid #90e0ef;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+/* Button styling */
+.eighthsection_submit_button {
+    padding: 12px 20px;
+    background-color: #90e0ef;
+    color: #0077b6;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 50%;
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+.eighthsection_submit_button:hover{
+    background-color: #90e0ef;
+}
+
+/* Textarea styling */
+.eighthsection_textarea {
+    border-radius: 20px;
+    resize: vertical;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+
+/* Subheader styling */
+.subheader{
+    color: #00b4d8;
+    font-size: 38px;
+    text-align: center;
+}
+
+
+/* Mobile Responsive: Stack the content vertically for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* Make the container stack the content vertically */
+    .eighthsection_container {
+        flex-direction: column; /* Stack the content vertically */
+        align-items: center; /* Center the items */
+        width: 100%; /* Ensure the container takes the full width */
+    }
+
+    /* Ensure map and form containers take full width but are centered */
+    .eighthsection_map, .eighthsection_form_container {
+        flex: none; /* Remove flex grow */
+        width: 100%; /* Make the map and form container take full width */
+        margin: 0 auto; /* Center them horizontally */
+    }
+
+    /* Center the headings and subheadings */
+    .eighthsection_heading,
+    .eighthsection_subheading {
+        margin-left: 0; /* Remove left margin for better alignment on small screens */
+        text-align: center; /* Center align the text */
+    }
+
+    /* Center the map label and change position to static */
+    .eighthsection_map_label, .eighthsection_map_label_blue {
+        position: static; /* Change the position to static so the label moves with the content */
+        margin-top: 10px; /* Adjust the spacing between the map and label */
+        text-align: center; /* Center the label text */
+    }
+
+    /* Ensure the map icon is centered too */
+    .location-icon {
+        margin: 0 auto; /* Center the icon */
+    }
+
+    /* Center the input form fields and buttons */
+    .eighthsection_form_group {
+        align-items: center; /* Center the form fields */
+        width: 100%; /* Ensure full width */
+    }
+
+    .eighthsection_input, .eighthsection_textarea {
+        width: 90%; /* Reduce input width for better fit */
+        margin: 10px auto; /* Center inputs and add space around them */
+    }
+
+    .eighthsection_submit_button {
+        width: 100%; /* Reduce the width of the button */
+        margin-left: 0; /* Remove the left margin */
+        margin-top: 20px; /* Space above the button */
+        display: block; /* Make the button block-level so it stretches */
+        margin-right: auto; /* Center align the button */
+    }
+
+    /* Adjust the form container for better mobile layout */
+    .eighthsection_form_container {
+        padding: 20px; /* Add some padding for better spacing */
+        margin-top: 20px; /* Space above the form */
+    }
+    /* Label and location icon */
+.eighthsection_map_label {
+    position: absolute; /* Absolutely position the label */
+    top: 255px; /* 100px from the top */
+    left: 210px;
+    color: red; /* White color for text/icon */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    align-items: center; /* Align icon and text in the center */
+    font-size: 16px; /* Set font size for label */
+}
+.location-message {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: -100px; /* Adjust the position relative to the icon */
+    left:-200px ; /* Adjust position to appear next to the icon */
+    background-color:white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.371); /* Add shadow effect */
+    color: grey;
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+}
+
+.bold-blue {
+    font-weight: bold; /* Make the text bold */
+    color: #03045e; /* Set the text color to blue (#03045e is a deep blue shade) */
+}

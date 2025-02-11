@@ -1,0 +1,128 @@
+.blogblog-container {
+    width: 90%; /* Full width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding */
+    margin-top: 100px;
+}
+
+.blog-header {
+    font-size: 1.5rem; /* Font size for the header */
+    font-weight: bold;
+    text-align: left; /* Align the header */
+    margin-bottom: -40px; /* Space below the header */
+    margin-left: 2%;
+    width: 700px;
+    color: #03045e;
+}
+
+.top-blogbox {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 20px; /* Space below the top box */
+}
+
+.top-image {
+    width: 500px; /* Fixed width for the top image */
+    height: 300px; /* Set a fixed height for rectangular shape */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    margin-left: 10px; /* Space between description and image */
+    margin-right: 2.5%; /* Space on the right */
+}
+
+.top-description {
+    font-size: 1.2rem; /* Font size for the description */
+    color: grey; /* Dark color for text */
+    flex: 1; /* Allow description to take available space */
+    text-align: left; /* Align text to the left */
+    margin-left: 2%;
+    width: 700px;
+    overflow: hidden;
+}
+
+.bottom-container {
+    width: 100%; /* Full width */
+    padding: 20px; /* Optional padding */
+}
+
+.bottom-boxes {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center the boxes */
+    flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+}
+
+.bottom-box {
+    cursor: pointer; /* Pointer cursor on hover */
+    flex: 1; /* Each box takes equal space */
+    margin: 0 10px; /* Space between boxes */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.bottom-box:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.bottom-image {
+    width: 100%; /* Full width for the bottom image */
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.small-description {
+    font-size: 0.8rem; /* Smaller font size */
+    color: rgb(56, 55, 55); /* Dark color for the small description */
+    text-align: center; /* Center align text */
+    margin-top: 5px; /* Space above the small description */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .blog-header {
+        margin-bottom: 10px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .top-blogbox {
+        flex-direction: column; /* Stack description and image vertically */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text within the box */
+        margin-bottom: 30px; /* Space between top box and bottom boxes */
+    }
+
+    .top-image {
+        width: 90%; /* Make the top image responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0; /* Remove margins for a cleaner look */
+    }
+
+    .top-description {
+        margin-top: 10px; /* Space between the image and description */
+        margin-left: 0; /* Remove left margin for the description */
+        overflow: visible; /* Ensure overflow is visible */
+        display: block; /* Make sure it's displayed as a block */
+        width: 90%; /* Make the description take full width */
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .bottom-boxes {
+        flex-direction: column; /* Stack bottom boxes vertically */
+        align-items: center; /* Center align boxes */
+        justify-content: center; /* Center content */
+    }
+
+    .bottom-box {
+        margin: 10px 0; /* Space between boxes */
+        width: 100%; /* Full width for each box */
+        max-width: 300px; /* Optional: Limit max width */
+        display: flex; /* Use flexbox for the layout */
+        flex-direction: column; /* Stack image and description vertically */
+        align-items: center; /* Center items */
+    }
+
+    .small-description {
+        text-align: center; /* Center align description */
+        margin-top: 5px; /* Space above the small description */
+    }
+}

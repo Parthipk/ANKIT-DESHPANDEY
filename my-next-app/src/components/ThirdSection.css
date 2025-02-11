@@ -1,0 +1,153 @@
+/* Container for the section */
+.third-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Layout for the circles container */
+.circle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 items per row */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    width: 90%; /* Set the width to 90% */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Individual service item (circle) */
+.circle-item {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-item:hover {
+    box-shadow: 0 8px 16px rgba(135, 207, 235, 0.612);
+    border-radius: 30px;
+}
+
+.circle-image {
+    width: 150px; /* Make image smaller for circles */
+    height: 150px; /* Maintain a circular shape */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover;
+    margin-bottom: 15px; /* Space between image and text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.circle-image:hover {
+    transform: scale(1.1); /* Slightly scale up the image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Title inside each circle */
+.circle-heading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+/* Description inside each circle */
+.circle-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px; /* Space between description and the bottom of the circle */
+}
+
+/* Load More button styling */
+.load-more-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0076b6bb;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more-button:hover {
+  background-color: #005f8a;
+}
+
+/* Responsive adjustments */
+
+/* Tablet and Mobile layout (screen width <= 1024px) */
+@media (max-width: 1024px) {
+  .circle-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
+  }
+
+  .circle-image {
+    width: 120px; /* Adjust image size */
+    height: 120px;
+  }
+
+  .circle-heading {
+    font-size: 16px; /* Adjust heading font size */
+  }
+
+  .circle-description {
+    font-size: 12px; /* Adjust description font size */
+  }
+
+  .load-more-button {
+    display: block; /* Show Load More button */
+  }
+}
+
+/* Mobile layout (screen width <= 768px) */
+@media (max-width: 768px) {
+  .circle-container {
+    grid-template-columns: 1fr; /* 1 item per row on mobile */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .circle-image {
+    width: 100px; /* Adjust image size */
+    height: 100px;
+  }
+
+  .circle-heading {
+    font-size: 14px; /* Adjust heading font size */
+  }
+
+  .circle-description {
+    font-size: 12px; /* Adjust description font size */
+  }
+
+  .load-more-button {
+    display: block; /* Show Load More button */
+  }
+}
+
+/* Very small mobile layout (screen width <= 480px) */
+@media (max-width: 480px) {
+  .circle-image {
+    width: 80px; /* Further adjust image size */
+    height: 80px;
+  }
+
+  .circle-heading {
+    font-size: 12px; /* Further adjust heading font size */
+  }
+
+  .circle-description {
+    font-size: 10px; /* Further adjust description font size */
+  }
+
+  .load-more-button {
+    display: block; /* Ensure Load More button is visible */
+  }
+}

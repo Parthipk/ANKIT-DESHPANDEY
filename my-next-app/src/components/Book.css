@@ -1,0 +1,141 @@
+.book-outer-container {
+    width: 100%; /* Set width to 85% */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Outer container padding */
+    background-color: rgb(143, 143, 211); /* Light background color */
+    margin-top: 100px;
+}
+
+.book-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+}
+
+.book-left-column {
+    width: 45%; /* Adjust width as needed */
+    padding: 10px; /* Padding for the left column */
+    margin-left: 75px;
+}
+
+.book-right-column {
+    width: 45%; /* Adjust width as needed */
+    padding: 10px; /* Padding for the right column */
+}
+
+.book-form-container {
+    background-color: white; /* White background for the form container */
+    border-radius: 30px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+}
+
+.book-header {
+    font-size: 24px; /* Header font size */
+    color: #ffffff; /* Dark text color */
+}
+
+.book-description {
+    font-size: 16px; /* Description font size */
+    color: #ffffff; /* Lighter text color */
+    margin-top: 10px; /* Space above the description */
+}
+
+.book-booking-form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.book-form-row {
+    display: flex; /* Use flexbox for row layout */
+    justify-content: space-between; /* Space between form groups */
+    margin-bottom: 15px; /* Space between form rows */
+}
+
+.book-form-group {
+    flex: 1; /* Allow each group to take equal space */
+    margin-right: 10px; /* Space between form groups */
+}
+
+.book-form-group:last-child {
+    margin-right: 0; /* Remove margin for the last group */
+}
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input, textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 10px; /* Padding for input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+}
+
+button {
+    padding: 10px; /* Padding for button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.book-button-container {
+    margin-top: 20px; /* Space above buttons */
+}
+
+.book-button {
+    margin-right: 10px; /* Space between buttons */
+    padding: 10px 20px; /* Padding for buttons */
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.book-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .book-container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .book-left-column,
+    .book-right-column {
+        width: 90%; /* Full width for columns */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 20px; /* Space below columns */
+    }
+
+    .book-form-container {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .book-header {
+        font-size: 20px; /* Smaller header font size */
+    }
+
+    .book-description {
+        font-size: 14px; /* Smaller description font size */
+    }
+
+    .book-button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+    }
+
+    .book-button {
+        width: 100%; /* Full width for buttons */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Space below buttons */
+    }
+}

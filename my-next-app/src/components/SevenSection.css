@@ -1,0 +1,123 @@
+/* Default styles (for larger screens) */
+.sevensection_container {
+  display: flex; /* Flexbox layout for the entire container */
+  justify-content: center; /* Center content horizontally */
+  padding: 20px;
+}
+
+.sevensection_content {
+  display: flex; /* Flexbox for dividing the layout */
+  justify-content: space-between; /* Space out the columns */
+  width: 100%; /* Ensure the container uses full width */
+  flex-wrap: wrap; /* Allow the columns to wrap on smaller screens */
+  align-items: center; /* Align items vertically to the center */
+}
+
+.sevensection_image {
+  flex: 1; /* Allow image section to take 50% of the space */
+  display: flex;
+  justify-content: center; /* Center the image */
+  align-items: center;
+  order: 1; /* Ensure image comes first on mobile */
+}
+
+.sevensection_image_placeholder {
+  width: 100%; /* Make the image take full width of its container */
+  max-width: 500px; /* Set max-width to prevent the image from becoming too large */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
+.sevensection_faq {
+  flex: 1; /* Take the remaining 50% of the space */
+  margin-top: 50px;
+
+  order: 2; /* Ensure FAQ comes second */
+}
+
+.sevensection_heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.sevensection_accordion {
+  margin-bottom: 20px;
+}
+
+.sevensection_accordion_header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #ffff;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.119);
+  padding: 10px;
+  width: 85%;
+  border-radius: 5px;
+}
+
+.sevensection_accordion_title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sevensection_accordion_icon {
+  font-size: 24px;
+  color: #00b4d8;
+}
+
+.sevensection_accordion_content {
+  padding: 10px;
+  background-color: #ffff;
+  color: grey;
+  border-radius: 5px;
+  width: 85%;
+}
+
+.header {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 40px; /* Sets font size to 40px */
+  font-weight: bold; /* Makes the text bold */
+  color: #03045e; /* Sets the text color */
+  margin-bottom: 20px; /* Adds some space below the heading */
+  margin-top: 100px;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: gray;
+  margin-top: 10px;
+}
+
+/* For mobile devices (small screens), adjust the layout */
+@media (max-width: 768px) {
+  .sevensection_content {
+    flex-direction: column; /* Stack the columns vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .sevensection_image {
+    order: 1; /* Ensure image stays at the top */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+  .sevensection_accordion_content {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .sevensection_faq {
+    order: 2; /* FAQ goes below the image */
+    margin-top: 20px; /* Reduce the margin between FAQ and image */
+  }
+  .sevensection_accordion_header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #ffff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.119);
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+}

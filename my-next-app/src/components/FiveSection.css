@@ -1,0 +1,213 @@
+/* Full-width container */
+.five-fll-width-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #caf0f8;
+  margin-top: 50px;
+}
+
+/* Centered container */
+.five-centered-container {
+  width: 80%;
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Slider section */
+.five-slider-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Slider styles */
+.five-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Box styles */
+.five-box {
+  flex: 0 0 calc(50% - 20px); /* Set width to 50% minus the gap */
+  box-sizing: border-box;
+  padding: 20px;
+  margin-right: 20px; /* Add margin for gap between boxes */
+  display: flex; /* Flexbox for left/right alignment */
+  align-items: flex-start; /* Align items to the top */
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #90e0ef;
+}
+
+/* Remove margin from the last box to prevent overflow */
+.five-box:last-child {
+  margin-right: 0; /* Prevents overflow on the last box */
+}
+
+/* Image styles */
+.five-image-container {
+  flex: 0 0 10%; /* 30% for image on the left */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.five-box-image {
+  width: 150px;
+  margin-right: 0px;
+  border-radius: 8px;
+}
+
+/* Text styles */
+.five-text-container {
+  flex: 1; /* Remaining space for text */
+  padding-left: 20px; /* Space between image and text */
+  overflow: hidden; /* Prevent overflow */
+  display: flex; /* Enable flexbox for text alignment */
+  flex-direction: column; /* Stack text elements vertically */
+  justify-content: center; /* Center text vertically */
+}
+
+/* Dot navigation styles */
+.five-dot-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.five-dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #0077b6;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.five-dot.five-active {
+  background-color: #03045e;
+}
+
+/* Heading styles */
+.five-centered-container .five-main-heading {
+  font-size: 2.25rem;
+  color: #03045e;
+  font-weight: bold;
+}
+
+.five-centered-container .five-sub-heading {
+  font-size: 1.25rem;
+  color: grey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+/* Media queries for responsiveness */
+
+/* For medium screens like tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .five-centered-container {
+    width: 90%; /* Increase container width */
+  }
+
+  .five-slider-container {
+    flex-direction: column; /* Stack the boxes vertically */
+  }
+
+  .five-box {
+    flex: 0 0 100%; /* Make each box take full width */
+    margin-right: 0; /* Remove margin between boxes */
+    margin-bottom: 20px; /* Add spacing between the boxes */
+  }
+
+  .five-image-container {
+    flex: 0 0 30%; /* Increase the image size */
+  }
+
+  .five-box-image {
+    width: 120px; /* Reduce image size */
+  }
+
+  .five-text-container {
+    padding-left: 15px; /* Reduce space between image and text */
+  }
+
+  .five-centered-container .five-main-heading {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  .five-centered-container .five-sub-heading {
+    font-size: 1rem; /* Reduce sub-heading size */
+  }
+}
+
+/* For small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .five-centered-container {
+    width: 95%; /* Increase container width */
+  }
+
+  .five-box {
+    flex: 0 0 100%; /* Make each box take full width */
+    margin-right: 0; /* Remove margin between boxes */
+    margin-bottom: 15px; /* Add spacing between the boxes */
+  }
+
+  .five-image-container {
+    flex: 0 0 40%; /* Increase the image size */
+  }
+
+  .five-box-image {
+    width: 100px; /* Further reduce image size */
+  }
+
+  .five-text-container {
+    padding-left: 10px; /* Reduce space between image and text */
+  }
+
+  .five-centered-container .five-main-heading {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .five-centered-container .five-sub-heading {
+    font-size: 0.9rem; /* Further reduce sub-heading size */
+  }
+}
+/* Styling for the description text */
+.five-description {
+  font-size: 1rem; /* Set font size to make it readable */
+  color: #555; /* Set text color to a softer grey for better readability */
+  line-height: 1.6; /* Increase line-height for better text spacing */
+  margin-top: 10px; /* Add margin above the description */
+  margin-bottom: 15px; /* Add margin below the description */
+  font-weight: normal; /* Keep the font weight normal */
+  text-align: justify; /* Align text to justify for a clean look */
+  /* Remove max-height and overflow to ensure text isn't cut off */
+  max-height: none;
+  overflow: visible;
+}
+
+/* Adjust the description for mobile screens */
+@media (max-width: 768px) {
+  .five-description {
+    font-size: 0.9rem; /* Reduce the font size on mobile */
+    text-align: left; /* Align text to the left on mobile devices */
+    margin-top: 8px; /* Adjust margin to suit mobile layout */
+    margin-bottom: 10px; /* Reduce bottom margin */
+   
+  }
+}
+
+/* For small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .five-description {
+    font-size: 0.85rem; /* Further reduce font size for very small screens */
+    text-align: left; /* Align text to the left on mobile devices */
+    margin-top: 6px; /* Adjust top margin */
+    margin-bottom: 8px; /* Adjust bottom margin */
+    
+  }
+}

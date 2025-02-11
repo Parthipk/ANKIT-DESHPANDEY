@@ -1,0 +1,116 @@
+.outer-container {
+    width: 85%; /* Set width to 85% */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Outer container padding */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 15px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    margin-top: 100px;
+}
+
+
+.main-header-container {
+    display: flex;
+    justify-content:flex-start; /* Space between header and logo */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below the header section */
+    padding: 0 10px; /* Optional: Add horizontal padding */
+}
+
+.main-header {
+    font-size: 24px; /* Main header font size */
+    color: #333; /* Dark text color */
+    margin-right: 5px; /* Reduce space between header and logo */
+}
+
+.header-logo {
+    width: 50px; /* Adjust logo size as needed */
+    height: 50px; /* Adjust logo size as needed */
+    background-color: lightgray; /* Placeholder color for header logo */
+}
+
+.main-header {
+    font-size: 24px; /* Main header font size */
+    color: #333; /* Dark text color */
+}
+
+.header-logo {
+    width: 50px; /* Adjust logo size as needed */
+    height: 50px; /* Adjust logo size as needed */
+    background-color: lightgray; /* Placeholder color for header logo */
+}
+
+.about-two-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    width: 45%; /* Adjust width as needed */
+    padding: 10px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between header and paragraph */
+}
+
+.logo {
+    width: 40px; /* Adjust logo size as needed */
+    height: 40px; /* Adjust logo size as needed */
+    background-color: lightgray; /* Placeholder color for logo */
+    margin-right: 10px; /* Space between logo and header */
+}
+
+.about-description {
+    font-size: 16px; /* Set font size */
+    line-height: 1.5; /* Set line height for better readability */
+    color: #333; /* Dark text color */
+    margin: 0; /* Remove default margin */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { /* For tablets and smaller devices */  
+    .outer-container {
+        width: 95%; /* Make the outer container wider */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .main-header-container {
+        flex-direction: row; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        margin-left: 10px;
+    }
+
+    .main-header {
+        margin-bottom: 10px; /* Space below the header */
+        font-size: 20px; /* Slightly smaller font size */
+    }
+
+    .header-logo {
+        width: 40px; /* Adjust logo size */
+        height: 40px; /* Adjust logo size */
+    }
+
+    .about-two-container {
+        flex-direction: column; /* Stack columns vertically */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .column {
+        width: 100%; /* Full width for each column */
+        margin-bottom: 20px; /* Space between columns */
+    }
+}
+
+@media (max-width: 480px) { /* For mobile devices */
+    .main-header {
+        font-size: 18px; /* Even smaller font size */
+    }
+
+    .header-logo {
+        width: 35px; /* Smaller logo size */
+        height: 35px; /* Smaller logo size */
+    }
+}
